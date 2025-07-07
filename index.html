@@ -1,0 +1,34 @@
+<html>
+  <head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <script src="https://checkout.flywire.lol/flywire-payment.js"></script>
+    <h1>This is a test page</h1>
+    We are using:
+    <p>https://checkout.flywire.lol/flywire-payment.js</p>
+    <button id="clientOwnButton" class="clientButton">
+      Client button, opens Comm Payex
+    </button>
+    <script>
+      document
+        .querySelector("#clientOwnButton")
+        .addEventListener("click", function(event) {
+          window.FlywirePayment.initiate({
+            recipientCode: "CJP",
+            amount: "50",
+            returnUrl: "https://www.lalatest.qa",
+            firstName: "Test",
+            lastName: "CommPayex",
+            city: "Cluj-Napoca",
+            country: "RO",
+            email: "test.commercial.payex.glitch@mailinator.com",
+            phone: "+40800800800",
+            address: "from glitch page",
+            callbackUrl: "",
+            callbackId: ""
+          }).render();
+        });
+    </script>
+  </body>
+</html>
